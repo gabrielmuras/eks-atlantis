@@ -3,7 +3,9 @@ resource "aws_subnet" "private-subnet-01" {
   cidr_block        = var.subnets[terraform.workspace].private-subnet-01.cidr_block
   availability_zone = var.subnets[terraform.workspace].private-subnet-01.availability_zone
 
-  tags = var.subnets[terraform.workspace].private-subnet-01.tags
+  tags = {
+    Name = var.subnets[terraform.workspace].private-subnet-01.name
+  }
 }
 
 resource "aws_subnet" "private-subnet-02" {
@@ -11,5 +13,7 @@ resource "aws_subnet" "private-subnet-02" {
   cidr_block        = var.subnets[terraform.workspace].private-subnet-02.cidr_block
   availability_zone = var.subnets[terraform.workspace].private-subnet-02.availability_zone
 
-  tags = var.subnets[terraform.workspace].private-subnet-02.tags
+  tags = {
+    Name = var.subnets[terraform.workspace].private-subnet-02.name
+  }
 }
