@@ -48,5 +48,23 @@ variable "gateways" {
       }
     }
   }
+}
+
+variable "routes" {
+  description = "Routes configuration"
+
+  default = {
+    home-lab = {
+      private-route-01 = {
+        name       = "private-subnet-route-01"
+        cidr_block = "0.0.0.0/0"
+      }
+
+      private-route-02 = {
+        name       = "private-subnet-route-01"
+        cidr_block = "0.0.0.0/0"
+      }
+    }
+  }
 
 }
