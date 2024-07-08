@@ -6,6 +6,6 @@ output "account_id" {
 
 resource "aws_vpc" "main" {
 
-  cidr_block = var.vpc_cidr_block[terraform.workspace]
+  cidr_block = var.vpc_cidr_block
 
 }
