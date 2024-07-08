@@ -13,8 +13,8 @@ variable "subnets" {
   }))
 }
 
-variable "gateway" {
-  description = "Gateways configuration"
+variable "gateway_name" {
+  description = "Internet Gateway name"
   type        = string
 }
 
