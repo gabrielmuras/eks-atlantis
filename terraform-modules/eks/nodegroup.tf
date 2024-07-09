@@ -22,4 +22,9 @@ resource "aws_eks_node_group" "node-groups" {
         aws_iam_role_policy_attachment.eks_nodegroup_AmazonEKS_CNI_Policy,
         aws_iam_role_policy_attachment.eks_nodegroup_AmazonEC2ContainerRegistryReadOnly,
     ]
+
+    tags = {
+        
+        NodeGroup = each.value.name
+    }
 }
