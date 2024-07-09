@@ -20,7 +20,7 @@ variable "subnet_ids" {
 
 variable "eks_addons" {
   description = "EKS addons"
-  type        = map(object({
+  type = map(object({
     version = string
   }))
 }

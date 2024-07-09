@@ -6,7 +6,7 @@ variable "vpc_cidr_block" {
 
 variable "subnets" {
   description = "Subnets configuration"
-  type       = map(object({
+  type = map(object({
     name              = string
     cidr_block        = string
     availability_zone = string

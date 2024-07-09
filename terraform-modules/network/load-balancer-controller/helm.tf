@@ -1,4 +1,4 @@
-resource "helm_release" "alb_controller" {  
+resource "helm_release" "alb_controller" {
   name       = var.helm_chart_name
   chart      = var.helm_chart_release_name
   repository = var.helm_chart_repo
@@ -40,7 +40,7 @@ resource "helm_release" "alb_controller" {
     value = "false"
   }
   set {
-    name = "vpcId"
+    name  = "vpcId"
     value = var.vpc_id
   }
   values = [

@@ -1,10 +1,10 @@
 resource "aws_route_table" "public" {
   for_each = var.routes
-  vpc_id = aws_vpc.main.id
+  vpc_id   = aws_vpc.main.id
 
   route {
-    cidr_block     = each.value.cidr_block
-    gateway_id     = aws_internet_gateway.internet-gateway.id
+    cidr_block = each.value.cidr_block
+    gateway_id = aws_internet_gateway.internet-gateway.id
   }
 
   tags = {
