@@ -1,3 +1,8 @@
+variable "aws_region" {
+  default = "us-east-1"
+
+}
+
 variable "vpc_cidr_block" {
   default = {
     home-lab = "10.0.0.0/16"
@@ -79,6 +84,7 @@ variable "eks_addons" {
       coredns = {
         version = "v1.11.1-eksbuild.8"
       }
+
     }
   }
 }
@@ -94,5 +100,19 @@ variable "eks_node_group" {
         min_size       = 1
       }
     }
+  }
+}
+
+variable "atlantis" {
+  default = {
+    orgAllowlist                   = ""
+    atlantisDataDirectory          = ""
+    ingress_annotations_class      = "alb"
+    ingress_annotations_type       = "internet-facing"
+    github_user                    = "dummyUser"
+    github_token                   = "dummyToken"
+    github_webhook_secret          = "dummySecret"
+    atlantis_aws_secret_access_key = ""
+    atlantis_aws_access_key_id     = ""
   }
 }
