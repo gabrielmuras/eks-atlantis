@@ -1,0 +1,50 @@
+resource "helm_release" "alb_controller" {  
+  name       = var.helm_chart_name
+  chart      = var.helm_chart_release_name
+  repository = var.helm_chart_repo
+  version    = var.helm_chart_version
+  namespace  = var.namespace
+
+  set {
+    name  = "clusterName"
+    value = var.cluster_name
+  }
+
+  set {
+    name  = "awsRegion"
+    value = var.aws_region
+  }
+
+  set {
+    name  = "rbac.create"
+    value = "true"
+  }
+
+  set {
+    name  = "serviceAccount.create"
+    value = "true"
+  }
+
+  set {
+    name  = "serviceAccount.name"
+    value = var.service_account_name
+  }
+
+  set {
+    name  = "serviceAccount.annotations.eks\\.amazonaws\\.com/role-arn"
+    value = aws_iam_role.kubernetes_alb_controller.arn
+  }
+
+  set {
+    name  = "enableServiceMutatorWebhook"
+    value = "false"
+  }
+  set {
+    name = "vpcId"
+    value = var.vpc_id
+  }
+  values = [
+    yamlencode(var.settings)
+  ]
+
+}
