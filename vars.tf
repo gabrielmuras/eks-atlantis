@@ -88,7 +88,6 @@ variable "eks_node_group" {
 variable "atlantis" {
   default = {
     orgAllowlist                   = ""
-    atlantisDataDirectory          = ""
     ingress_annotations_class      = "alb"
     ingress_annotations_type       = "internet-facing"
     github_user                    = "dummyUser"

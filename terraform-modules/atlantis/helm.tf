@@ -6,7 +6,6 @@ resource "helm_release" "atlantis" {
   namespace  = var.namespace
   values = [
     templatefile("${path.module}/values/values.yaml.tpl", {
-      atlantisDataDirectory          = var.atlantisDataDirectory,
       scheme                         = var.ingress_annotations_type,
       ingress_class                  = var.ingress_annotations_class,
       subnets                        = var.ingress_annotations_subnet,

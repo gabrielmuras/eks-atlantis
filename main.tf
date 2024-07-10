@@ -34,7 +34,6 @@ module "load-balancer-controller" {
 module "atlantis" {
   source                         = "./terraform-modules/atlantis"
   orgAllowlist                   = var.atlantis.orgAllowlist
-  atlantisDataDirectory          = var.atlantis.atlantisDataDirectory
   ingress_annotations_class      = var.atlantis.ingress_annotations_class
   ingress_annotations_type       = var.atlantis.ingress_annotations_type
   ingress_annotations_subnet     = tostring(join(",", module.vpc.subnet_ids))

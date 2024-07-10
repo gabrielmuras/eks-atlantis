@@ -11,7 +11,7 @@ aws:
     aws_access_key_id="${atlantis_aws_access_key_id}"
     aws_secret_access_key="${atlantis_aws_secret_access_key}"
 
-atlantisDataDirectory: "${atlantisDataDirectory}"
+atlantisDataDirectory: "/home/atlantis/data"
 
 volumeClaim:
   enabled: false

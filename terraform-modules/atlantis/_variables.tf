@@ -37,11 +37,6 @@ variable "orgAllowlist" {
   type        = string
 
 }
-variable "atlantisDataDirectory" {
-  description = "Atlantis data directory"
-  type        = string
-
-}
 
 variable "ingress_annotations_class" {
   description = "Ingress annotations"
