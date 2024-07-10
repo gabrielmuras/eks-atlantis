@@ -76,7 +76,7 @@ variable "eks_node_group" {
   default = {
     home-lab-node-group = {
       name           = "home-lab-node-group"
-      instance_types = ["t2.micro"]
+      instance_types = ["t2.small"]
       desired_size   = 1
       max_size       = 2
       min_size       = 1

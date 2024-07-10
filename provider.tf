@@ -1,6 +1,6 @@
 provider "aws" {
-  region  = "us-east-1"
-  profile = "home-lab"
+  region  = var.aws_region
+  #profile = "home-lab"
 }
 
 data "aws_eks_cluster" "cluster" {
