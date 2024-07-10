@@ -95,3 +95,6 @@ I don't think that using terraform is the best approach to apply kubernetes/helm
 
 ![image](https://github.com/gabrielmuras/eks-atlantis/assets/62755656/59507e37-98f4-4986-9f7b-74e4d066cc1f)
 
+![image](https://github.com/gabrielmuras/eks-atlantis/assets/62755656/362b374c-a442-407c-855f-c4f0da075702)
+
+
